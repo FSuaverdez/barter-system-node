@@ -2,48 +2,53 @@ const mongoose = require('mongoose')
 const { isEmail } = require('validator')
 const bcrypt = require('bcrypt')
 
-const userSchema = new mongoose.Schema({
-  email: {
-    type: String,
-    required: [true, 'Please enter an email'],
-    unique: true,
-    lowercase: true,
-    validate: [isEmail, 'Please enter a valid email'],
+const userSchema = new mongoose.Schema(
+  {
+    email: {
+      type: String,
+      required: [true, 'Please enter an email'],
+      unique: true,
+      lowercase: true,
+      validate: [isEmail, 'Please enter a valid email'],
+    },
+    username: {
+      type: String,
+      required: [true, 'Please enter an username'],
+    },
+    firstName: {
+      type: String,
+      required: [true, 'Please enter your First Name'],
+    },
+    lastName: {
+      type: String,
+      required: [true, 'Please enter your Last Name'],
+    },
+    address: {
+      type: String,
+      required: [true, 'Please enter your address'],
+    },
+    contactNo: {
+      type: String,
+      required: [true, 'Please enter your Contact Number'],
+    },
+    gender: {
+      type: String,
+      required: [true, 'Please enter your Gender'],
+    },
+    age: {
+      type: String,
+      required: [true, 'Please enter your Age'],
+    },
+    password: {
+      type: String,
+      required: [true, 'Please enter a password'],
+      minlength: [6, 'Minimum password length is 6 characters'],
+    },
   },
-  email: {
-    type: String,
-    required: [true, 'Please enter an username'],
-  },
-  firstName: {
-    type: String,
-    required: [true, 'Please enter your First Name'],
-  },
-  lastName: {
-    type: String,
-    required: [true, 'Please enter your Last Name'],
-  },
-  address: {
-    type: String,
-    required: [true, 'Please enter your address'],
-  },
-  contactNo: {
-    type: String,
-    required: [true, 'Please enter your Contact Number'],
-  },
-  gender: {
-    type: String,
-    required: [true, 'Please enter your Gender'],
-  },
-  age: {
-    type: String,
-    required: [true, 'Please enter your Age'],
-  },
-  password: {
-    type: String,
-    required: [true, 'Please enter a password'],
-    minlength: [6, 'Minimum password length is 6 characters'],
-  },
-})
+  {
+    timestamps: true,
+  }
+)
 
 // fire a function before doc saved to db
 userSchema.pre('save', async function (next) {

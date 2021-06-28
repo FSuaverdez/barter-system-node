@@ -90,15 +90,20 @@
       <div class="col-lg-6 col-md-6 col-md-6 col-xs-6" id="product-border">
 
         <div class="image-product">
-          <img class='item-image' src="../images/blank.png" alt="kariton">
+          <img class='profile-image' src="../images/blank.png" alt="kariton">
         </div>
 
         <div class="description_item">
-          <h5 class="traders_name">Traders Name: Breach Gonzales</h5>
-          <p class="traders_location">Location: Pasig City</p>
-          <p class="contact">Contact Numbers: 09888515163</p>
-          <p class="item-preferred">Preferred Item to barter: Kotse (Suzuki)</p>
-          <p class="traders_choice">Preferred Transaction: Delivery</p>
+          <h5 class="traders_name">Traders Name: <%= `${user.firstName} ${user.lastName}` %>
+          </h5>
+          <p class="traders_location">Location: <%= user.address %>
+          </p>
+          <p class="contact">Contact Numbers: <%= user.contactNo %>
+          </p>
+          <p class="item-preferred">Preferred Item to barter: <%= product.preffered%>
+          </p>
+          <p class="traders_choice">Preferred Transaction: <%= product.transaction %>
+          </p>
 
         </div>
 
@@ -107,14 +112,16 @@
       <div class="col-lg-6 col-md-4 col-xs-4" id="product-border">
 
         <div class="image-product">
-          <img class='item-image' src="../images/download.png" alt="kariton">
+          <img class='item-image' src="../images/uploads/<%= product.images[0].fileName %>" alt="kariton">
         </div>
 
         <div class="description_item">
-          <h5 class="item_name">Item Name: Karton</h5>
+          <h5 class="item_name">Item Name: <%= product.name %>
+          </h5>
           <h5 class="item-information">Description:</h5>
-          <p class="item-information">Durable Kariton Pang malakasan to sulit na sulit. Kaya mag buhat ng dalawang
-            sakong bigas. isang gallon tubig, and many more. Good quality, no scratch.</p>
+          <p class="item-information">
+            <%= product.description %>
+          </p>
           <h6 class="item-information">Category: Technology</h6>
 
 

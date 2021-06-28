@@ -80,10 +80,14 @@
 
   <!--upload photo-->
   <article class="card-body">
+
+
+
+    <h3 id="details">Fill-up all the details</h3>
     <div class="container col-lg-6 col-md-8 col-sm-12">
       <div class="wrapper">
         <div class="image">
-          <img src="" alt="">
+          <img>
         </div>
         <div class="content">
           <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
@@ -92,25 +96,27 @@
         <div id="cancel-btn"><i class="fas fa-times"></i></div>
         <div class="file-name">File name here</div>
       </div>
-      <input id="default-btn" type="file" hidden>
-      <button onclick="defaultBtnActive()" id="custom-btn">Add Image</button>
 
-
-      <h3 id="details">Fill-up all the details</h3>
 
       <div class="formBx">
-        <form>
+        <form id="post">
+          <input id="default-btn" name="file" type="file" hidden>
+          <button onclick="defaultBtnActive()" id="custom-btn">Add Image</button>
           <div class="inputBx">
-            <input type="text" name="" placeholder="Item Name">
+            <input type="text" name="name" placeholder="Item Name">
           </div>
           <div class="inputBx">
-            <input type="text" name="" placeholder="Item Description">
+            <input type="text" name="description" placeholder="Item Description">
           </div>
           <div class="inputBx">
-            <input type="text" name="" placeholder="Trade to what item">
+            <input type="text" name="preffered" placeholder="Trade to what item">
           </div>
           <div class="inputBx">
-            <input type="text" name="" placeholder="Preferred mode of transaction">
+            <select name="transaction">
+              <option value="0" hidden>Select Preferred Transaction Method</option>
+              <option value="Meet Up">Meet Up</option>
+              <option value="Delivery">Delivery </option>
+            </select>
           </div>
           <div class="inputBx">
             <input type="submit" value="SUBMIT" name="">
@@ -128,10 +134,11 @@
     const defaultBtn = document.querySelector("#default-btn")
     const customBtn = document.querySelector("#custom-btn")
     const img = document.querySelector("img")
-    function defaultBtnActive() {
+    function defaultBtnActive(e) {
       defaultBtn.click();
     }
-    defaultBtn.addEventListener("change", function () {
+    defaultBtn.addEventListener("change", function (e) {
+      e.preventDefault()
       const file = this.files[0];
       if (file) {
         const reader = new FileReader();
@@ -142,6 +149,63 @@
         reader.readAsDataURL(file);
       }
     })
+
+
+    const form = document.querySelector('#post');
+    // const emailError = document.querySelector('.email.error');
+    // const passwordError = document.querySelector('.password.error');
+    console.log(form)
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (e.submitter.id == 'custom-btn') {
+        return
+      }
+
+
+      // get values
+      const name = form.name.value;
+      const description = form.description.value;
+      const preffered = form.preffered.value;
+      const transaction = form.transaction.value;
+      const file = form.file.files[0]
+
+
+
+      const formData = new FormData()
+
+      formData.append('name', name);
+      formData.append('description', description);
+      formData.append('preffered', preffered);
+      formData.append('transaction', transaction);
+
+      if (file) {
+        formData.append('file', file);
+      }
+
+      for (var pair of formData.entries()) {
+        console.log(pair[1]);
+      }
+
+      try {
+        const res = await fetch('/post', {
+          method: 'POST',
+          body: formData,
+        });
+        const data = await res.json();
+        console.log(data);
+        if (data.errors) {
+          console.log(data.errors)
+        }
+        if (data.post) {
+          location.assign('/product/' + data.post);
+        }
+
+      }
+      catch (err) {
+        console.log(err);
+      }
+
+    });
   </script>
 
 

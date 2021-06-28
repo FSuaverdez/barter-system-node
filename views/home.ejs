@@ -102,49 +102,24 @@
     <div class="container-fluid">
       <div class="row">
 
-        <div class='col-lg-3 col-md-4 col-md-6 col-xs-6'>
-          <div class='card mx-auto'>
-            <img class="card-img-top" src="images/download.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Karton</h5>
-              <p class="card-text">Durable Kariton Pang malakasan to sulit na sulit</p>
-              <a id="view_more" href="/product" class="btn btn-primary">View More</a>
-            </div>
-          </div>
-        </div>
+        <% products.forEach(p=> { %>
 
-        <div class='col-lg-3 col-md-4 col-md-6 col-xs-6'>
-          <div class='card mx-auto'>
-            <img class="card-img-top" src="images/download.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Karton 2</h5>
-              <p class="card-text">Omega Useful Kariton Pang malakasan to sulit na sulit</p>
-              <a id="view_more" href="/product" class="btn btn-primary">View More</a>
+          <div class='col-lg-3 col-md-4 col-md-6 col-xs-6'>
+            <div class='card mx-auto'>
+              <img class="card-img-top" src="images/uploads/<%= p.images[0].fileName  %>" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%= p.name%>
+                </h5>
+                <p class="card-text">
+                  <%= p.description %>
+                </p>
+                <a id="view_more" href="/product/<%= p._id %>" class="btn btn-primary">View More</a>
+              </div>
             </div>
           </div>
-        </div>
+          <% }) %>
 
-        <div class='col-lg-3 col-md-4 col-md-6 col-xs-6'>
-          <div class='card mx-auto'>
-            <img class="card-img-top" src="images/download.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Karton 3</h5>
-              <p class="card-text">User Friendly na Kariton Pang malakasan to sulit na sulit</p>
-              <a id="view_more" href="/product" class="btn btn-primary">View More</a>
-            </div>
-          </div>
-        </div>
-
-        <div class='col-lg-3 col-md-4 col-md-6 col-xs-6'>
-          <div class='card mx-auto'>
-            <img class="card-img-top" src="images/download.png" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Karton 4</h5>
-              <p class="card-text">Eco-Friendly kariton tulong kay mother earth.</p>
-              <a id="view_more" href="/product" class="btn btn-primary">View More</a>
-            </div>
-          </div>
-        </div>
 
 
       </div>

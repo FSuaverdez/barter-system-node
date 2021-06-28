@@ -1,8 +1,10 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const authRoutes = require('./routes/authRoutes')
+const productRoutes = require('./routes/productRoutes')
 const cookieParser = require('cookie-parser')
 const { requireAuth, checkUser } = require('./middleware/authMiddleware')
+const fileUpload = require('express-fileupload')
 
 const app = express()
 
@@ -10,7 +12,7 @@ const app = express()
 app.use(express.static('public'))
 app.use(express.json())
 app.use(cookieParser())
-
+app.use(fileUpload())
 // view engine
 app.set('view engine', 'ejs')
 
@@ -23,14 +25,14 @@ mongoose
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
-  .then((result) => app.listen(3000))
+  .then((result) => {
+    console.log(`Server is now running at http://localhost:3000/`)
+    app.listen(3000)
+  })
   .catch((err) => console.log(err))
+app.get('*', checkUser)
 
 // routes
-app.get('*', checkUser)
-app.get('/', (req, res) => res.render('home'))
-app.get('/product', (req, res) => res.render('product'))
-app.get('/post', (req, res) => res.render('post'))
 app.get('/notifications', (req, res) => res.render('notifications'))
-app.get('/smoothies', requireAuth, (req, res) => res.render('smoothies'))
 app.use(authRoutes)
+app.use(productRoutes)
