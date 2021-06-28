@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
 
 // handle errors
 const handleErrors = (err) => {
@@ -53,7 +54,7 @@ module.exports.login_get = (req, res) => {
 }
 
 module.exports.signup_post = async (req, res) => {
-  const {
+  let {
     email,
     password,
     username,
@@ -66,6 +67,8 @@ module.exports.signup_post = async (req, res) => {
   } = req.body
 
   try {
+    const salt = await bcrypt.genSalt()
+    password = await bcrypt.hash(password, salt)
     const user = await User.create({
       email,
       password,
