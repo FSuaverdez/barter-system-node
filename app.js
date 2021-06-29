@@ -33,8 +33,7 @@ mongoose
 app.get('*', checkUser)
 
 // routes
-app.get('/notifications', (req, res) => res.render('notifications'))
-app.get('/profile', (req, res) => res.render('profile'));
-app.get('/verify', (req, res) => res.render('verify'));
+app.get('/profile', (req, res) => res.render('profile'))
+app.get('/verify', (req, res) => res.render('verify'))
 app.use(authRoutes)
 app.use(productRoutes)

@@ -51,7 +51,7 @@ footer {
   align-items: center;
 }
 
-.card {
+.card.home {
   width: 15rem;
   height: 25rem;
   margin: 2rem;
