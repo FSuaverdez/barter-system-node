@@ -105,3 +105,24 @@ footer {
   border-style: solid;
   border-color: #333;
 }
+/*Verify Styles*/
+.Vcontainer{
+  border: #333 solid 2px;
+  padding: 20px;
+  width: 80%;
+  height: 50%;
+}
+.IDsrc{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left:5%;
+}
+.idType{
+  height: 40px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.Vheading{
+  text-align: center;
+}
