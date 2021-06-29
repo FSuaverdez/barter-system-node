@@ -125,11 +125,12 @@
           <p class="item-information">
             <%= product.description %>
           </p>
-          <h6 class="item-information">Category: Technology</h6>
+          <h6 class="item-information mb-4">Category: Technology</h6>
         </div>
-        <div class="d-flex justify-content-center"> <a href="/product/<%= product._id %>/offer"
-            class="btn btn-primary mb-3">Create Offer</a></div>
-
+        <% if (user._id !=product.senderId) { %>
+          <div class="d-flex justify-content-center"> <a href="/product/<%= product._id %>/offer"
+              class="btn btn-primary mb-3">Create Offer</a></div>
+          <% } %>
       </div>
     </div>
   </div>
