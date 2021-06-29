@@ -47,15 +47,16 @@
                   <li class="nav-item">
                     <a class="nav-link active" href="/">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/profile">Welcome <%= user.email %> </a>
-                  </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="/post">Posts</a>
                   </li>
 
                   <li class="nav-item">
                     <a class="nav-link" href="/notifications">Notifications</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/profile">Welcome <%= user.email %> </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="/logout">Log Out</a>
@@ -81,50 +82,50 @@
     </div>
 
   </header>
-  
+
   <!-- profile card-->
   <profile-card>
     <div class="wrapper">
-          <div class="left">
-              <img src="../public/images/download.png" alt="user" width="100">
-              <h4>Miguelito Malakas</h4>
-              <p>Trader</p>
+      <div class="left">
+        <img src="../images/blank.png" alt="user" width="100">
+        <h4>Miguelito Malakas</h4>
+        <p>Trader</p>
+      </div>
+      <div class="right">
+        <div class="info">
+          <h3>Information</h3>
+          <div class="info_data">
+            <div class="data">
+              <h4>Email</h4>
+              <p>manggiko@gmail.com</p>
+            </div>
+            <div class="data">
+              <h4>Contact</h4>
+              <p>09565535650</p>
+            </div>
           </div>
-          <div class="right">
-              <div class="info">
-                  <h3>Information</h3>
-                  <div class="info_data">
-                      <div class="data">
-                          <h4>Email</h4>
-                          <p>manggiko@gmail.com</p>
-                      </div>
-                      <div class="data">
-                          <h4>Contact</h4>
-                          <p>09565535650</p>
-                      </div>
-                  </div>
-              </div>
-  
-              <div class="acc">
-                  <h3>Account</h3>
-                  <div class="acc_data">
-                      <div class="data">
-                          <h4>Rating</h4>
-                          <p>10/10</p>
-                      </div>
-                      <div class="data">
-                          <h4>Verified</h4>
-                          <p>Account not verified yet</p>
-                      </div>
-                  </div>
-              </div>
-              <div class="pindut">
-                  <a href="/verify" target="_blank"><button class="bttn">Verify</button></a>    
-                </div>
+        </div>
+
+        <div class="acc">
+          <h3>Account</h3>
+          <div class="acc_data">
+            <div class="data">
+              <h4>Rating</h4>
+              <p>10/10</p>
+            </div>
+            <div class="data">
+              <h4>Verified</h4>
+              <p>Account not verified yet</p>
+            </div>
           </div>
+        </div>
+        <div class="pindut">
+          <a href="/verify" target="_blank"><button class="bttn">Verify</button></a>
+        </div>
+      </div>
     </div>
-    </profile-card>
-   
+  </profile-card>
+
   <!--Footer-->
   <footer class="page-footer font-small blue">
     <div class="footer-copyright text-center py-3">
