@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #ffd428;
+  }
+  
+  header nav {
+    font-weight: bold;
+  }
+  
+  .nav-bar a {
+    color: black;
+  }
+  
+  #navbutton {
+    margin-left: auto;
+  }
+  
+  .navbar {
+    align-content: center;
+  }
+  
+  #profile {
+    margin-left: 6px;
+    align-content: right;
+  }
+  
+  .dropdown {
+    padding: 15px;
+  }
+  
+  footer {
+    background: #333;
+    color: white;
+  }
+  
+  /*CARD CSS*/
+  .cards img {
+    width: 100%;
+    height: 50%;
+    align-items: center;
+  }
+  
+  .card {
+    width: 15rem;
+    height: 25rem;
+    margin: 2rem;
+  }
+  
+  .card-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 20px;
+  }
+  
+  #view_more.btn {
+    margin-top: 20px;
+  }
+  
+  /*Product Page CSS*/
+  
+  #product-border {
+    margin-top: 13px;
+    margin-bottom: 20px;
+    padding-top: 17px;
+    border-style: solid;
+    border-color: #333;
+  }
+  
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+  }
+  
+  #back-button {
+    margin-top: 15px;
+    background-color: #ffd428;
+    border: #333 2px solid;
+  }
+  
+  /*OLEG CSS d2 Hule*/
+  
+  .item-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /*Table*/
+  
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 6px solid rgba(27, 29, 26, 0.829);
+    background-color: white;
+  }
+  
+  .table-box{
+    width: 100%;
+    height:400px;
+    overflow-y:auto;
+    overflow-x:auto;
+  }
+  
+  th, td, tr{
+    text-align: center;
+    padding: 18px;
+  
+  }
+  
+  tr:nth-child(even){
+    background-color: #f2f2f2
+  }
+  
+  .acc_id{
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+  .page-title{
+    padding-top: 20px;
+    margin-bottom: 20px;
+    margin-top: 200;
+    font-size: 50px;
+  }
+  
+  /*Action Buttons*/
+  
+  
+  .publish{
+    color: green;
+  }
+  
+  .edit{
+    color: blue;
+  }
+  
+  .delete{
+    color: red;
+  }
+  
+  .publish:link{
+    color:green;
+  }
+  
+  
+  .publish:visited{
+    color:green;
+  }
+  
+  .publish:hover{
+    text-decoration: underline green;
+  }
+  
+  .publish:active{
+    color: green;
+  }
+  
+  
+  .edit:link{
+    color:blue;
+  }
+  
+  
+  .edit:visited{
+    color:blue;
+  }
+  
+  .edit:hover{
+    text-decoration: underline blue;
+  }
+  
+  .edit:active{
+    color: blue;
+  }
+  
+  .delte:link{
+    color:red;
+  }
+  
+  
+  .delete:visited{
+    color:red;
+  }
+  
+  .delete:hover{
+    text-decoration: underline red;
+  }
+  
+  .delete:active{
+    color: red;
+  }
