@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+  }
+  
+  header {
+    background-color: #ffd428;
+  }
+ 
+  footer {
+    background: #333;
+    color: white;
+  }
+  
+  #title-header{
+    margin-top: 15px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+
+  /*OLEG CSS d2 Hule*/
+
+  /*SIDEBAR*/
+
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+
+/*TABLE STYLES*/
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 6px solid rgba(27, 29, 26, 0.829);
+  background-color: white;
+}
+
+.table-box{
+  width: 100%;
+  height:400px;
+  overflow-y:auto;
+  overflow-x:auto;
+  margin-bottom: 15px;
+}
+
+th, td, tr{
+  text-align: center;
+  padding: 18px;
+
+}
+
+tr:nth-child(even){
+  background-color: #f2f2f2
+}
+
+.acc_id{
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+.page-title{
+  padding-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 200;
+  font-size: 50px;
+}
+
+/*ITEM & Verif TABLE ADJUSTMENT*/
+#item-table{
+  margin-left: 5%;
+}
+
+#verif-table{
+  margin-left: 11%;
+}
+
+
+/*Action Buttons*/
+
+.publish{
+  color: green;
+}
+
+.publish:link{
+  color:green;
+}
+
+
+.publish:visited{
+  color:green;
+}
+
+.publish:hover{
+  text-decoration: underline green;
+}
+
+.publish:active{
+  color: green;
+}
+
+.delete{
+  color: red;
+}
+
+.delete:link{
+  color:red;
+}
+
+
+.delete:visited{
+  color:red;
+}
+
+.delete:hover{
+  text-decoration: underline red;
+}
+
+.delete:active{
+  color: red;
+}

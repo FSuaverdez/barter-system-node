@@ -1,138 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style4.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Xchange | Admin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../public/styles/style4.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1fb0c16617.js" crossorigin="anonymous"></script>
+  <title>XChange | Admin</title>
 </head>
+
 <body>
-    <div class="container">
-        <h2>Administrator</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore nulla aspernatur eligendi architecto nobis eaque ipsam unde provident maiores, fuga necessitatibus molestias est quis voluptas tenetur corporis blanditiis voluptate veritatis?</p>
-        <ul class="nav nav-pills">
-          <li class="active"><a data-toggle="pill" href="#user-accounts">User Accounts</a></li>
-          <li><a data-toggle="pill" href="#product-list">Product and Items</a></li>
-          <li><a data-toggle="pill" href="#verifications">Verfications</a></li>
-          <li><a data-toggle="pill" href="#status">Status</a></li>
-        </ul>
-        
-        <div class="tab-content">
-            <!--MANAGE ACCOUNTS ETOOOO-->
-          <div id="user-accounts" class="tab-pane fade in active">
-            <div class="container">
-                <h2 class="page-title"><b>Manage Userssss Accounts</b></h2>
-                <div class="table-box">
-                  <table>
-                    <!-- CODE FOR THE HEADER IN THE TABLE IN MANAGE ACCOUNTS-->
-                    <tr>
-                      <th class="acc_id">USER ID</th>
-                      <th>SURNAME</th>
-                      <th>FNAME</th>
-                      <th>EMAIL</th>
-                      <th>USERNAME</th>
-                      <th>CONTACT#</th>
-                      <th>ADDRESS</th>
-                      <th>GENDER</th>
-                      <th>SOCIAL ACCOUNT</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </table>
-                </div>
+  
+   <!--Title-->
+  <header>
+    <div class="container-fluid">
+        <p id="title-header">XChange | Admin</p>
+    </div>
+  </header>
+
+    <div class="container-fluid">
+      <div class="topnav">
+        <a class="active" href="admin.html"><i class="fa fa-fw fa-user-circle"></i>  Users Accounts</a>
+        <a href="items.html"><i class="fa fa-fw fa-shopping-cart"></i>  Users Items/Products</a>
+        <a href="verification.html"><i class="fa fa-fw fa-address-card"></i>  Verification Accounts</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="container-fluid" >
+              <h2 class="page-title"><b>Manage User Accounts</b></h2>
+              <div class="table-box">
+                <table>
+                  <tr>
+                    <th class="acc_id">ID</th>
+                    <th>SURNAME</th>
+                    <th>FNAME</th>
+                    <th>EMAIL</th>
+                    <th>PASSWORD</th>
+                    <th>CONTACT#</th>
+                    <th>STATUS</th>
+                    <th>ITEMS</th>
+                    <th>VERIF. EMAIL</th>
+                    <th colspan="3">ACTIONS</th>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>Luna</td>
+                    <td>Juan</td>
+                    <td>LJUAN@yahoo.com</td>
+                    <td>Traydor02</td>
+                    <td>08777545455</td>
+                    <td>Inactive</td>
+                    <td>Gun</td>
+                    <td>LJUAN@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>Bonifacio</td>
+                    <td>Andres</td>
+                    <td>BANDRESS@yahoo.com</td>
+                    <td>Heneral02</td>
+                    <td>096363515122/td>
+                    <td>Active</td>
+                    <td>Sword</td>
+                    <td>BANDRESS@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+                    <td>Wade</td>
+                    <td>John</td>
+                    <td>JOHNI@yahoo.com</td>
+                    <td>Dsaser02</td>
+                    <td>09777515155</td>
+                    <td>Inactive</td>
+                    <td>Ball</td>
+                    <td>LJUAN@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>Ben</td>
+                    <td>Ten</td>
+                    <td>LJUAN@yahoo.com</td>
+                    <td>Traydor02</td>
+                    <td>0815454265</td>
+                    <td>Active</td>
+                    <td>Watch</td>
+                    <td>LJUAN@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>Edd</td>
+                    <td>Sherun</td>
+                    <td>running@yahoo.com</td>
+                    <td>BeybehI02</td>
+                    <td>09876152323</td>
+                    <td>Inactive</td>
+                    <td>Mic</td>
+                    <td>running@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>6</td>
+                    <td>Last</td>
+                    <td>Tikman</td>
+                    <td>Tikman@yahoo.com</td>
+                    <td>Lastik02</td>
+                    <td>086232213544</td>
+                    <td>Inactive</td>
+                    <td>Rubber</td>
+                    <td>Tikman@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>7</td>
+                    <td>Mac</td>
+                    <td>Arthur</td>
+                    <td>MR@yahoo.com</td>
+                    <td>Airplane02</td>
+                    <td>08666212644</td>
+                    <td>Inactive</td>
+                    <td>Airplane</td>
+                    <td>MR@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>8</td>
+                    <td>Bold</td>
+                    <td>Sinas</td>
+                    <td>Party@yahoo.com</td>
+                    <td>Partyinthehouse02</td>
+                    <td>08666213777</td>
+                    <td>Active</td>
+                    <td>Party Hats</td>
+                    <td>Party@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>9</td>
+                    <td>Garen</td>
+                    <td>Crownguard</td>
+                    <td>GarenC@yahoo.com</td>
+                    <td>DEMACIA02</td>
+                    <td>09265413289</td>
+                    <td>Active</td>
+                    <td>Big Sword</td>
+                    <td>GarenC@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                  <tr>
+                    <td>10</td>
+                    <td>Fiora</td>
+                    <td>Silversword</td>
+                    <td>Fsilver@yahoo.com</td>
+                    <td>Demacia02</td>
+                    <td>09271362748</td>
+                    <td>Active</td>
+                    <td>Dagger</td>
+                    <td>Fsilver@yahoo.com</td>
+                    <td><a href="#"class="delete">Delete</a></td>
+                  </tr>
+
+                </table>
+              </div>
+              
             </div>
-          </div>
-              <!-- END -->
-
-                  <!--PRODUCT OR ITEM ETOOOO-->
-          <div id="product-list" class="tab-pane fade">
-            <div class="container">
-                <h2 class="page-title"><b>Manage User Items/Products</b></h2>
-                <div class="table-box">
-                  <table>
-                    <!-- CODE FOR THE HEADER IN THE TABLE IN MANAGE ACCOUNTS-->
-                    <tr>
-                      <th class="acc_id">USER ID</th>
-                      <th>SURNAME</th>
-                      <th>FNAME</th>
-                      <th>EMAIL</th>
-                      <th>USERNAME</th>
-                      <th>CONTACT#</th>
-                      <th>ADDRESS</th>
-                      <th>GENDER</th>
-                      <th>SOCIAL ACCOUNT</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </table>
-                </div>
-            </div>enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-              <!--END-->
-
-
-
-
-
-
-
-    <!--VERIFICATIONSSSSS ETOOOO-->
-          <div id="verifications" class="tab-pane fade">
-            <div class="container">
-                <h2 class="page-title"><b>Manage Users Verification Accounts</b></h2>
-                <div class="table-box">
-                  <table>
-                    <!-- CODE FOR THE HEADER IN THE TABLE IN MANAGE ACCOUNTS-->
-                    <tr>
-                      <th class="acc_id">USER ID</th>
-                      <th>SURNAME</th>
-                      <th>FNAME</th>
-                      <th>EMAIL</th>
-                      <th>USERNAME</th>
-                      <th>CONTACT#</th>
-                      <th>ADDRESS</th>
-                      <th>GENDER</th>
-                      <th>SOCIAL ACCOUNT</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </table>
-                </div>
-            </div>
-          </div>
-    <!--END-->
-
-
-              <!--STATUSSSSSS ETOOOO-->
-          <div id="status" class="tab-pane fade">
-            <div class="container">
-                <h2 class="page-title"><b>Status Repots on Transactions</b></h2>
-                <div class="table-box">
-                  <table>
-                    <!-- CODE FOR THE HEADER IN THE TABLE IN MANAGE ACCOUNTS-->
-                    <tr>
-                      <th class="acc_id">USER ID</th>
-                      <th>SURNAME</th>
-                      <th>FNAME</th>
-                      <th>EMAIL</th>
-                      <th>USERNAME</th>
-                      <th>CONTACT#</th>
-                      <th>ADDRESS</th>
-                      <th>GENDER</th>
-                      <th>SOCIAL ACCOUNT</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </table>
-                </div>
-            </div>
-          </div>
-              <!--END-->
-
-
-
         </div>
-      </div> <!--CONTAINER DIV-->
-      
+
+
+
+  <!--Footer-->
+  <footer class="page-footer font-small blue">
+    <div class="footer-copyright text-center py-3">
+      © 2021 Copyright: XChange
+    </div>
+  </footer>
+
 </body>
+
 </html>
