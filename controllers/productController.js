@@ -68,7 +68,8 @@ module.exports.submit_post = async (req, res) => {
 module.exports.product_get = async (req, res) => {
   try {
     const product = await Product.findById(req.params.id)
-    const sender = await User.findById(product.userId)
+    const sender = await User.findById(product.senderId)
+    console.log(sender)
     res.render('product', { product, sender })
   } catch (err) {
     const errors = handleErrors(err)
