@@ -12,7 +12,7 @@ const productSchema = new mongoose.Schema(
     },
     senderId: {
       type: String,
-      required: [true, 'senderId is required'],
+      required: [true, 'senderId is required!'],
     },
     description: {
       type: String,
